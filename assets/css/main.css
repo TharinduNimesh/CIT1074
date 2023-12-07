@@ -1,78 +1,89 @@
-@import url('/assets/lib/bootstrap/bootstrap.min.css');
+@import url("/assets/lib/bootstrap/bootstrap.min.css");
 
+:root {
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+  --color-yellow: #fc8712;
+}
 
-.bg-warning {
-    background-color: var(--color-default) !important;
-    }
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+  transition: all .3s ease-in-out;
+}
 
-  :root {
-    --color-default: #212529;
-    --color-primary: #ce1212;
-    --color-secondary: #37373f;
-    --color-yellow: #fc8712;
-  }
-  body {
-    font-family: var(--font-default);
-    color: var(--color-default);
-  }
-  
-  a {
-    color: var(--color-yellow);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #ec2727;
-    text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-secondary);
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: #ec2727;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+
+.header {
+  position: fixed;
+  background-color: #0f0e0c55;  
+  backdrop-filter: blur(10px);
+  top: 10px;
+  left: 1%;
+  width: 98%;
+  padding: 20px 0;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .logo h1 span {
+  color: var(--color-primary);
+}
+
+.header .btn-menu,
+.header .btn-menu:focus {
+  font-size: 14px;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.navbar ul li a {
+  font-size: 14px;
+  padding: 0 5px;
+  border-radius: 50px;
+}
+
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 0;
   }
 
-  .header .logo h1 span {
-    color: var(--color-primary);
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
   }
-  
-  .header .btn-menu,
-  .header .btn-menu:focus {
-    font-size: 14px;
-    color: #fff;
-    background: var(--color-primary);
-    padding: 8px 20px;
-    margin-left: 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-  }
- 
 
-  @media (min-width: 1280px) {
-    .navbar {
-      padding: 0;
-    }
-  
-    .navbar ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-  
-    .navbar li {
-      position: relative;
-    }
-  
-    .navbar>ul>li {
-      white-space: nowrap;
-      padding: 10px 0 10px 28px;
-    }
-
+  .navbar li {
+    position: relative;
   }
-  
-  
+
+  .navbar > ul > li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
+}
