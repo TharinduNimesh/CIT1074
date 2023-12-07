@@ -41,6 +41,7 @@ try {
             ]);
             exit();
         }
+        session_start();
 
         # Get user data
         $email = $row["email"];

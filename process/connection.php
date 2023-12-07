@@ -25,4 +25,5 @@ try {
         "status" => "error",
         "message" => "Database connection failed"
     ]);
+    exit();
 }
