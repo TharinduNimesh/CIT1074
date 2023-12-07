@@ -36,13 +36,60 @@ try {
                 '$data->address', 
                 '$data->mobile'
             )";
-    
-    $result = mysqli_query($conn, $sql);
-    echo json_encode([
-        "status"=> "success",
-        "order" => $result
-    ]);
 
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        echo json_encode([
+            "status" => "error",
+            "message" => "Error while placing order"
+        ]);
+        exit();
+    }
+
+    # Get last inserted id
+    $sql = "SELECT * FROM `order` WHERE 
+        `name` = '$data->name' AND 
+        `address` = '$data->address' AND 
+        `mobile` = '$data->mobile' ORDER BY `id` DESC LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+    $order = mysqli_fetch_array($result);
+
+    if (!$result) {
+        echo json_encode([
+            "status" => "error",
+            "message" => "Something went wrong"
+        ]);
+        exit();
+    }
+
+    # Insert order items
+    foreach ($data->items as $item) {
+        $sql = "INSERT INTO `order_has_food` (`order_id`, `food_id`, `qty`)
+                VALUES (
+                    " . $order['id'] . ", 
+                    '$item->id',
+                    '$item->qty'
+                )";
+        $result = mysqli_query($conn, $sql);
+        if (!$result) {
+            echo json_encode([
+                "status" => "error",
+                "message" => "Something went wrong"
+            ]);
+
+            # Delete order if order items insertion fails
+            $sql = "DELETE FROM `order` WHERE `id` = " . $order['id'];
+            $result = mysqli_query($conn, $sql);
+
+            exit();
+        }
+    }
+
+    echo json_encode([
+        "status" => "success",
+        "message" => "Order Placed Successfully"
+    ]);
 } catch (Exception $e) {
     echo "Something went wrong" . $e->getMessage();
 }
