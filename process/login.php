@@ -16,7 +16,7 @@ try {
     $data = json_decode(file_get_contents("php://input"));
 
     # Validate data
-    if (!isset($data->email) || empty($data->password)) {
+    if (empty($data->email) || empty($data->password)) {
         echo json_encode([
             "status" => "error",
             "message" => "All fields are required"
