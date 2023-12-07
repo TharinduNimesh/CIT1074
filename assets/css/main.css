@@ -60,12 +60,12 @@ h6 {
 
 .header {
   position: fixed;
-  background-color: #0f0e0c55;  
+  background-color: #0f0e0c95;  
   backdrop-filter: blur(10px);
   top: 10px;
   left: 1%;
   width: 98%;
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 999;
   transition: all 0.3s ease-in-out;
 }
@@ -85,7 +85,7 @@ h6 {
 }
 
 .navbar ul li a {
-  font-size: 14px;
+  font-size: 17px;
   padding: 0 5px;
   border-radius: 50px;
 }
