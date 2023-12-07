@@ -64,11 +64,13 @@ try {
         "status" => "error",
         "message" => "Invalid Login Credentials",
     ]);
-    exit();
+    $conn->close();
 } catch (Exception $e) {
     echo json_encode([
         "status" => "error",
         "message" => "Something went wrong"
     ]);
-    exit();
+    $conn->close();
 }
+
+$conn->close();

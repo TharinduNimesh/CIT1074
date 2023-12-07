@@ -93,3 +93,5 @@ try {
 } catch (Exception $e) {
     echo "Something went wrong" . $e->getMessage();
 }
+
+$conn->close();

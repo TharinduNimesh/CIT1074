@@ -60,4 +60,7 @@ try {
         "status" => "error",
         "message" => "Something went wrong"
     ]);
+    $conn->close();
 }
+
+$conn->close();
