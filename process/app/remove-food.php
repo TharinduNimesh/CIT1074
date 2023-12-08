@@ -4,10 +4,10 @@ include_once("auth.php");
 
 try {
     # Check request method
-    if ($_SERVER["REQUEST_METHOD"] !== "GET") {
+    if ($_SERVER["REQUEST_METHOD"] !== "DELETE") {
         echo json_encode([
             "status" => "error",
-            "message" => "Only GET requests are allowed"
+            "message" => "Only DELETE requests are allowed"
         ]);
         exit();
     }
