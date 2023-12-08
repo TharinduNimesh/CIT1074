@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <link href="/assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <?php include_once('../components/common/header.php') ?>
   <title>Menu</title>
 </head>
 
@@ -22,10 +19,10 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/menu.html">Menu</a></li>
-          <li><a href="/pages/order.html">Orders</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/about.php">About</a></li>
+          <li><a href="/pages/menu.php">Menu</a></li>
+          <li><a href="/pages/order.php">Orders</a></li>
+          <li><a href="/pages/contact.php">Contact</a></li>
         </ul>
       </nav>
       <a class="btn-menu" href="/pages/login.php">Login Here</a>
@@ -123,9 +120,9 @@
             </div>
           </div>
 
-            </div>
-          </div>
         </div>
+      </div>
+      </div>
 
       </div>
     </section>
@@ -195,7 +192,8 @@
     </footer>
     <!-- End Footer Section -->
   </main>
-  <script src="/assets/js/main.js"></script>
+
+  <?php include_once('../components/common/js.php') ?>
 </body>
 
 </html>

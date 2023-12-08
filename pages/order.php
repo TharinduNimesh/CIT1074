@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <link href="/assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <?php include_once('../components/common/header.php') ?>
   <title>Orders</title>
 
   <style>
@@ -81,13 +78,13 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/menu.html">Menu</a></li>
-          <li><a href="/pages/order.html">Orders</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/about.php">About</a></li>
+          <li><a href="/pages/menu.php">Menu</a></li>
+          <li><a href="/pages/order.php">Orders</a></li>
+          <li><a href="/pages/contact.php">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn-menu" href="/pages/login.html">Login Here</a>
+      <a class="btn-menu" href="/pages/login.php">Login Here</a>
     </div>
   </header>
   <!-- End navbar -->
@@ -159,8 +156,7 @@
                   <tr>
                     <th scope="row" class="border-0">
                       <div class="p-2">
-                        <img src="/assets/img/menu/menu-item-1.png" alt="" width="70"
-                          class="img-fluid rounded shadow-sm">
+                        <img src="/assets/img/menu/menu-item-1.png" alt="" width="70" class="img-fluid rounded shadow-sm">
                         <div class="ml-3 d-inline-block align-middle">
                           <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex
                               Originals</a></h5>
@@ -175,8 +171,7 @@
                   <tr>
                     <th scope="row">
                       <div class="p-2">
-                        <img src="/assets/img/menu/menu-item-2.png" alt="" width="70"
-                          class="img-fluid rounded shadow-sm">
+                        <img src="/assets/img/menu/menu-item-2.png" alt="" width="70" class="img-fluid rounded shadow-sm">
                         <div class="ml-3 d-inline-block align-middle">
                           <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5>
                         </div>
@@ -190,8 +185,7 @@
                   <tr>
                     <th scope="row">
                       <div class="p-2">
-                        <img src="/assets/img/menu/menu-item-3.png" alt="" width="70"
-                          class="img-fluid rounded shadow-sm">
+                        <img src="/assets/img/menu/menu-item-3.png" alt="" width="70" class="img-fluid rounded shadow-sm">
                         <div class="ml-3 d-inline-block align-middle">
                           <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a>
                         </div>
@@ -291,7 +285,8 @@
     </footer>
     <!-- End Footer Section -->
   </main>
-  <script src="/assets/js/main.js"></script>
+
+  <?php include_once('../components/common/js.php') ?>
 </body>
 
 </html>

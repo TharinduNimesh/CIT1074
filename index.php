@@ -19,10 +19,10 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/menu.html">Menu</a></li>
-          <li><a href="/pages/order.html">Orders</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/about.php">About</a></li>
+          <li><a href="/pages/menu.php">Menu</a></li>
+          <li><a href="/pages/order.php">Orders</a></li>
+          <li><a href="/pages/contact.php">Contact</a></li>
         </ul>
       </nav>
       <a class="btn-menu" href="/pages/login.php">Login Here</a>
@@ -48,7 +48,7 @@
                 </h2>
                 <div class="d-flex gap-5 p-3">
                   <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
-                    <a href="/pages/menu.html">Our Menu</a>
+                    <a href="/pages/menu.php">Our Menu</a>
                   </button>
                   <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
                     <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Place a Order</a>
