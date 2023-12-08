@@ -35,6 +35,8 @@
   --color-yellow: #fc8712;
 }
 
+
+
 body {
   font-family: var(--font-default);
   color: #f0ede6;
@@ -287,4 +289,15 @@ h6 {
 
 .footer .credits a {
   color: #fff;
+}
+
+.menu-topic{
+  padding-top: 100px;
+}
+
+.menu-topic-color{
+  color: var(--color-yellow);
+}
+.menu-price{
+  color: var(--color-primary);
 }
