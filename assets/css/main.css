@@ -33,6 +33,13 @@
   --color-primary: #ce1212;
   --color-secondary: #37373f;
   --color-yellow: #fc8712;
+  --color-dark: rgb(25, 26, 22) 27, 27;
+}
+
+.comment-color{
+  color: var(--color-dark);
+  width: 100%;
+  height: fit-content;
 }
 
 
