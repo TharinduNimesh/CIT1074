@@ -5,16 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link href="assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <title>Document</title>
 </head>
 
 <body class="bg-dark">
-  <!--nav bar-->
+  <!-- nav bar -->
   <header class="header fixed-top d-flex align-items-center justify-content-center rounded">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0 m-0 p-0"><a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+      <h1 class="logo me-auto me-lg-0 m-0 p-0">
+        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
           <h1>CAFE<span>Eversoft</span>.</h1>
-        </a></h1>
+        </a>
+      </h1>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -24,95 +27,105 @@
           <li><a href="/pages/order.html">Orders</a></li>
           <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
-      </nav><!--navbar -->
+      </nav>
       <a class="btn-menu" href="/pages/login.html">Login Here</a>
-
     </div>
   </header>
+  <!-- End navbar -->
 
-  <div class="home-bg-img">
-    <div class="layer"></div>
-    <div class="details">
-      <div class="slogun d-flex justify-content-center align-items-center">
-        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-          <div class="row">
-            <div class="col-6">
-              <h1>Welcome to <span>Cafe Eversoft...</span></h1>
-              <h2>Cafe Eversoft: A Symphony of Taste and Comfort.</h2>
-
-              <div class="d-flex gap-5 p-3">
-                <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto"><a
-                    href="/pages/menu.html">Our Menu</a></button>
-                <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto"><a
-                    href="#book-a-table" class="btn-book animated fadeInUp scrollto">Place a Order</a></button>
+  <main id="main">
+    <!-- home section -->
+    <section class="details">
+      <div class="home-bg-img opacity-75">
+        <div class="slogun d-flex justify-content-center align-items-center bg-gradient">
+          <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+              <div class="col-6">
+                  <h1 class="text-warning">Welcome to <span class="text-danger">Cafe Eversoft...</span></h1>
+                  <h2 class="text-secondary">Cafe Eversoft: A Symphony of Taste and Comfort.</h2>
+                <div class="d-flex gap-5 p-3">
+                  <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
+                    <a href="/pages/menu.html">Our Menu</a>
+                  </button>
+                  <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
+                    <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Place a Order</a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-      
-    </div>
-    <div class="layer">
-      <section id="chefs" class="chefs">
-        <div class="container p-5">
-    
-          <div class="section-title">
-            <h2 class="">Chefs</h2>
-            <p>Our Proffesional Chefs</p>
-          </div>
-    
-          <div class="row">
-    
-            <div class="col-lg-4 col-md-6">
-              <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                <img src="/assets/img/chef-presenting-something-white-background.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Walter White</h4>
-                    <span>Master Chef</span>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6">
-              <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                <img src="/assets/img/chef-with-thumb-up-white-background.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Patissier</span>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6">
-              <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                <img src="/assets/img/chefs-3.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>William Anderson</h4>
-                    <span>Cook</span>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-    
-          </div>
-    
+    </section>
+    <!-- End home section -->
+
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title pt-5">
+          <h1 class="text-primary">Chefs</h1>
+          <p>Our Proffesional Chefs</p>
         </div>
-      </section>
-    </div>
-  </div>
 
- 
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/chefs-1.jpg" class="img-fluid" alt="" />
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/chefs-2.jpg" class="img-fluid" alt="" />
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/chefs-3.jpg" class="img-fluid" alt="" />
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Chefs Section -->
+  </main>
   <script src="/assets/js/main.js"></script>
 </body>
 
