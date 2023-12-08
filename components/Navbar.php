@@ -15,6 +15,6 @@
           <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn-menu" href="/pages/login.html">Login Here</a>
+      <a class="btn-menu" href="/pages/login.php">Login Here</a>
     </div>
   </header>

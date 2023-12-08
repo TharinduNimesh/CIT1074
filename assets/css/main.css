@@ -1,5 +1,5 @@
 @import url("/assets/lib/bootstrap/bootstrap.min.css");
-
+@import url("/node_modules/izitoast/dist/css/iziToast.min.css");
 
  .home-bg-img {
   background-image: url('/assets/img/hero-bg.jpg');

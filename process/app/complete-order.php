@@ -4,41 +4,44 @@ include_once("auth.php");
 
 try {
     # Check request method
-    if ($_SERVER["REQUEST_METHOD"] !== "DELETE") {
+    if ($_SERVER["REQUEST_METHOD"] !== "PUT") {
         echo json_encode([
             "status" => "error",
-            "message" => "Only DELETE requests are allowed"
+            "message" => "Only PUT requests are allowed"
         ]);
         exit();
     }
 
-    if (empty($_GET["id"])) {
+    # Validate data
+    if (!isset($_GET["id"])) {
         echo json_encode([
             "status" => "error",
-            "message" => "Food ID is required"
+            "message" => "Order ID is required"
         ]);
         exit();
     }
 
+    # Get data from json
     $id = $_GET["id"];
 
-    # Mark food as removed
-    $sql = "UPDATE food SET is_removed = 1 WHERE id = $id";
+    # Update order status
+    $sql = "UPDATE `order` SET `is_completed` = 1 WHERE `id` = $id";
     $result = mysqli_query($conn, $sql);
 
-    # Check if query is successful
+    # Check if query executed successfully
     if (!$result) {
         echo json_encode([
             "status" => "error",
-            "message" => "Error While Removing Food"
+            "message" => "Error while completing order"
         ]);
         exit();
     }
 
     echo json_encode([
         "status" => "success",
-        "message" => "Food Removed Successfully"
+        "message" => "Order $id Mark As Completed"
     ]);
+    
 } catch (Exception $e) {
     echo json_encode([
         "status" => "error",

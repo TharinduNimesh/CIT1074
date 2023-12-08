@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <link href="assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <?php include_once('./components/common/header.php') ?>
   <title>Document</title>
 </head>
 
@@ -28,7 +25,7 @@
           <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn-menu" href="/pages/login.html">Login Here</a>
+      <a class="btn-menu" href="/pages/login.php">Login Here</a>
     </div>
   </header>
   <!-- End navbar -->
@@ -43,8 +40,12 @@
           <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
             <div class="row">
               <div class="col-6">
-                <h1 class="text-warning">Welcome to <span class="text-danger">Cafe Eversoft...</span></h1>
-                <h2 class="text-light">Cafe Eversoft: A Symphony of Taste and Comfort.</h2>
+                <h1 class="text-warning">
+                  Welcome to <span class="text-danger">Cafe Eversoft...</span>
+                </h1>
+                <h2 class="text-light">
+                  Cafe Eversoft: A Symphony of Taste and Comfort.
+                </h2>
                 <div class="d-flex gap-5 p-3">
                   <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
                     <a href="/pages/menu.html">Our Menu</a>
@@ -129,20 +130,14 @@
     <!-- End Chefs Section -->
 
     <!-- comment section -->
-      <section>
-        <div class="container pt-5 comment-color">
-          
-        </div>
-
-      </section>  
-
+    <section>
+      <div class="container pt-5 comment-color"></div>
+    </section>
 
     <!-- comment section ends -->
 
-
     <!-- Footer Section -->
     <footer id="footer" class="footer">
-
       <div class="container pt-5 bg-dark">
         <div class="row gy-2">
           <div class="col-lg-3 col-md-6 d-flex">
@@ -150,11 +145,10 @@
             <div>
               <h4>Address</h4>
               <p>
-                Kelaniya <br>
-                Biyagama RD,Sri Lanka<br>
+                Kelaniya <br />
+                Biyagama RD,Sri Lanka<br />
               </p>
             </div>
-
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links d-flex">
@@ -162,8 +156,8 @@
             <div>
               <h4>Reservations</h4>
               <p>
-                <strong>Phone:</strong> +94 77 111 222 <br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong>Phone:</strong> +94 77 111 222 <br />
+                <strong>Email:</strong> info@example.com<br />
               </p>
             </div>
           </div>
@@ -173,7 +167,7 @@
             <div>
               <h4>Opening Hours</h4>
               <p>
-                <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                <strong>Mon-Sat: 11AM</strong> - 23PM<br />
                 Sunday: Closed
               </p>
             </div>
@@ -202,7 +196,8 @@
     </footer>
     <!-- End Footer Section -->
   </main>
-  <script src="/assets/js/main.js"></script>
+
+  <?php include_once('./components/common/js.php') ?>
 </body>
 
 </html>

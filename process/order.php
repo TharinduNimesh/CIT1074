@@ -91,7 +91,7 @@ try {
         "message" => "Order Placed Successfully"
     ]);
 } catch (Exception $e) {
-    echo "Something went wrong" . $e->getMessage();
+    echo "Something went wrong";
 }
 
 $conn->close();

@@ -2,11 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" integrity="..."
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/main.css" />
+  <?php include_once('../components/common/header.php') ?>
   <title>Login</title>
   <style>
     body {
@@ -25,10 +21,8 @@
 
 <body>
   <!-- Body Wrapper -->
-  <div class="page-wrapper bg-dark" id="main-wrapper" data-layout="vertical" data-navbarbg="light"
-    data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
-    <div
-      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="page-wrapper bg-dark" id="main-wrapper" data-layout="vertical" data-navbarbg="light" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
       <div class="d-flex align-items-center justify-content-center w-100">
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-6 col-xxl-3">
@@ -43,12 +37,12 @@
                 </h1>
                 <form>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="password">
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="form-check">
@@ -59,7 +53,7 @@
                     </div>
                     <a class="text-primary fw-bold" href="./index.html">Forgot Password?</a>
                   </div>
-                  <a href="./index.html" class="btn btn-primary w-100 fs-4 mb-4 rounded-2">Sign In</a>
+                  <button class="btn btn-primary w-100 fs-4 mb-4 rounded-2" type="button" onclick="login()">Sign In</button>
                 </form>
               </div>
             </div>
@@ -69,9 +63,33 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/js/main.js"></script>
+  <?php include_once('../components/common/js.php') ?>
+  <script>
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (email === '' || password === '') {
+        iziToast.error({
+          title: 'Error',
+          message: 'Please fill all the fields',
+        });
+      } else {
+        const response = await useFetch("/login.php", 'POST', {
+          email,
+          password
+        }, () => {
+          iziToast.success({
+            title: 'Success',
+            message: 'Login Successful',
+          });
+          window.location.href = '/pages/menu.php';
+        });
+
+        console.log(response);
+      }
+    }
+  </script>
 </body>
 
 </html>
