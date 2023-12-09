@@ -36,10 +36,10 @@
       <div class="home-bg-img">
         <div class="layer"></div>
 
-        <div class="slogun d-flex justify-content-center align-items-center bg-gradient">
+        <div class="slogun d-flex justify-content-center align-items-end bg-gradient">
           <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
             <div class="row">
-              <div class="col-6">
+              <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
                 <h1 class="text-warning">
                   Welcome to <span class="text-danger">Cafe Eversoft...</span>
                 </h1>
@@ -54,6 +54,9 @@
                     <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Place a Order</a>
                   </button>
                 </div>
+              </div>
+              <div class="d-none d-lg-flex justify-content-center align-items-end col-lg-6">
+                <img src="/assets/img/hero-man.png" style="width: 800px;" />
               </div>
             </div>
           </div>
