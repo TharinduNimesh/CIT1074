@@ -34,10 +34,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact bg-dark pt-5 pb-5">
       <div data-aos="fade-up" class="pt-5">
-        <iframe style="border:0; width: 100%; height: 350px;"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-          frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4351658933047!2d79.93745557491158!3d6.957883793042495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2579673eb66e1%3A0x4b6d5725db4bcbc!2sGonawala%20Junction!5e0!3m2!1sen!2sus!4v1702136195626!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      
 
       <div class="container" data-aos="fade-up">
 
