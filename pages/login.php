@@ -83,7 +83,7 @@
             title: 'Success',
             message: 'Login Successful',
           });
-          window.location.href = '/pages/menu.php';
+          window.location.href = '/pages/app/menu.php';
         });
       }
     }

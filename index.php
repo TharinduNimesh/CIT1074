@@ -51,7 +51,7 @@
                     <a href="/pages/menu.php">Our Menu</a>
                   </button>
                   <button type="button" class="btn btn-outline-warning btn-menu animated fadeInUp scrollto">
-                    <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Place a Order</a>
+                    <a href="/pages/menu.php" class="btn-book animated fadeInUp scrollto">Place a Order</a>
                   </button>
                 </div>
               </div>

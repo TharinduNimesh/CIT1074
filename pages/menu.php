@@ -49,7 +49,7 @@
               <h3>Starters</h3>
             </div>
 
-            <div class="row gy-5" id="menu-container">
+            <div class="row gap-3" id="menu-container">
 
             </div>
           </div>
