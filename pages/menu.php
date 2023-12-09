@@ -195,8 +195,11 @@
 
   <?php include_once('../components/common/js.php') ?>
       <script>
-        function menu(){
-            
+       async function SetMenu(){
+            const response = await useFetch("/get-menu.php",'GET');null
+        }
+        () => {
+          console.log('data');
         }
 
       </script>
