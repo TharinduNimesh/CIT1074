@@ -17,7 +17,7 @@ function useFetch(path, method = 'GET', body = null, callback = ()=> {}) {
       .then(response => response.json())
       .then(data => {
         if (data.status === 'success') {
-          callback();
+          callback(data);
         } else {
           iziToast.error({
             title: 'Error',

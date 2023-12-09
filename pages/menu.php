@@ -6,7 +6,7 @@
   <title>Menu</title>
 </head>
 
-<body>
+<body onload="setMenu()">
   <!-- nav bar -->
   <header class="header fixed-top d-flex align-items-center justify-content-center rounded">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -49,73 +49,7 @@
               <h3>Starters</h3>
             </div>
 
-            <div class="row gy-5">
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-1.png" class="glightbox"><img src="/assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Savory Sunrise Omelette</h4>
-                <p class="ingredients">
-                  A three-egg omelette filled with a medley of sautéed mushrooms, spinach, and feta cheese. Served with a side of golden hash browns and freshly toasted whole-grain bread.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 820.00
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-2.png" class="glightbox"><img src="/assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Mediterranean Avocado Toast</h4>
-                <p class="ingredients">
-                  Sliced avocado on a bed of artisanal multigrain toast, topped with cherry tomatoes, feta cheese crumbles, and a sprinkle of za'atar seasoning. Drizzled with extra virgin olive oil.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 690.00
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-3.png" class="glightbox"><img src="/assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Asian Fusion Chicken Noodle Bowl</h4>
-                <p class="ingredients">
-                  Tender slices of grilled chicken breast served on a bed of rice noodles, accompanied by crisp vegetables, and bathed in a flavorful soy-ginger broth. Garnished with green onions and sesame seeds.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 890
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-4.png" class="glightbox"><img src="/assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Harvest Quinoa Salad</h4>
-                <p class="ingredients">
-                  A hearty salad featuring a mix of quinoa, roasted butternut squash, kale, dried cranberries, and toasted almonds. Tossed in a zesty lemon vinaigrette.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 780.00
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-5.png" class="glightbox"><img src="/assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Cheesy Spinach and Artichoke Panini</h4>
-                <p class="ingredients">
-                  Grilled panini filled with a luscious blend of melted mozzarella, creamy spinach, and artichoke hearts. Served with a side of sweet potato fries.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 950.00
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item bg-gradient rounded p-3">
-                <a href="/assets/img/menu/menu-item-6.png" class="glightbox"><img src="/assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4 class="menu-topic-color">Decadent Chocolate Hazelnut Waffle</h4>
-                <p class="ingredients">
-                  Crispy waffle topped with a rich chocolate-hazelnut spread, fresh strawberries, and a dusting of powdered sugar. Finished with a scoop of vanilla bean ice cream.
-                </p>
-                <p class="price menu-price">
-                  Price: LKR 1100.00
-                </p>
-              </div><!-- Menu Item -->
+            <div class="row gy-5" id="menu-container">
 
             </div>
           </div>
@@ -126,9 +60,6 @@
 
       </div>
     </section>
-
-
-
 
     <!-- Footer Section -->
     <footer id="footer" class="footer">
@@ -194,15 +125,65 @@
   </main>
 
   <?php include_once('../components/common/js.php') ?>
-      <script>
-       async function SetMenu(){
-            const response = await useFetch("/get-menu.php",'GET');null
+  <script>
+    async function setMenu() {
+      const response = await useFetch("/get-menu.php", 'GET', null, data => {
+        console.log(data);
+        if (!Array.isArray(data?.data)) {
+          iziToast.error({
+            title: 'Error',
+            message: data.message,
+            position: 'topRight'
+          });
+          return;
         }
-        () => {
-          console.log('data');
-        }
+        try {
+          const items = data.data;
+          items.forEach(food => {
+            const container = document.getElementById('menu-container');
 
-      </script>
+            const menuItem = document.createElement('div');
+            menuItem.className = 'col-lg-4 menu-item bg-gradient rounded p-3';
+
+            const imgLink = document.createElement('a');
+            imgLink.href = '/assets/img/menu/menu-item-1.png';
+            imgLink.className = 'glightbox';
+
+            const img = document.createElement('img');
+            img.src = '/assets/img/menu/menu-item-1.png';
+            img.className = 'menu-img img-fluid';
+            img.alt = '';
+
+            const h4 = document.createElement('h4');
+            h4.className = 'menu-topic-color';
+            h4.textContent = food.name;
+
+            const pIngredients = document.createElement('p');
+            pIngredients.className = 'ingredients';
+            pIngredients.textContent = food.description;
+
+            const pPrice = document.createElement('p');
+            pPrice.className = 'price menu-price';
+            pPrice.textContent = `Rs. ${food.price}`;
+
+            // Appending child elements
+            imgLink.appendChild(img);
+            menuItem.appendChild(imgLink);
+            menuItem.appendChild(h4);
+            menuItem.appendChild(pIngredients);
+            menuItem.appendChild(pPrice);
+
+            container.appendChild(menuItem);
+          });
+        } catch (error) {
+          iziToast.error({
+            title: 'Error',
+            message: "Error While Loading Data : " + error,
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
