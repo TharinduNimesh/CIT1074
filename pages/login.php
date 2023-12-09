@@ -85,8 +85,6 @@
           });
           window.location.href = '/pages/menu.php';
         });
-
-        console.log(response);
       }
     }
   </script>

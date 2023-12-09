@@ -1,4 +1,4 @@
-@import url("/assets/lib/bootstrap/bootstrap.min.css");
+@import url("/node_modules/bootstrap/dist/css/bootstrap.min.css");
 @import url("/node_modules/izitoast/dist/css/iziToast.min.css");
 
  .home-bg-img {
@@ -307,4 +307,20 @@ h6 {
 }
 .menu-price{
   color: var(--color-primary);
+}
+
+
+.about-font{
+  margin-top: 100px;
+}
+.aboutUs-font2{
+  position: absolute;
+  bottom: 500px;
+  margin-left: 50px;
+  color: var(--color-yellow);
+}
+.aboutUs-font3{
+  position: absolute;
+  bottom: 400px;
+  margin-left: 50px;
 }
