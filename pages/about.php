@@ -33,66 +33,54 @@
   <main>
     <!-- about section -->
     <section id="about" class="about bg-dark">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header text-center mb-4">
-      <div class="about-font">
-        <h2 class="menu-topic-color">About Us</h2>
-        <p>Learn More <span>About Us</span></p>
-      </div>
-    </div>
-
-    <div class="row gy-4">
-      <div class="col-lg-7 position-relative about-img p-3" style="background-image: url(/assets/img/about.jpg);"
-        data-aos="fade-up" data-aos-delay="150">
-        <div class="call-us position-absolute">
-          <h4>Cafe Eversoft: A Symphony of Taste and Comfort.</h4>
-          <p>+94 77 111 222</p>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header d-flex justify-content-center align-items-center ">
+          <div class="about-font">
+            <h2 class="menu-topic-color">About Us</h2>
+            <p>Learn More <span>About Us</span></p>
+          </div>
         </div>
-        <div>
-          <h2 class="aboutUs-font2">Welcome to CAFE.Eversoft...</h2>
-          <p class="aboutUs-font3">Cafe Eversoft is dedicated to minimizing our environmental footprint. From
-            eco-friendly packaging to energy-efficient practices, we are constantly exploring ways to reduce our
-            impact on the environment. Join us in our commitment to a greener future as we strive to make each cup and
-            every dish not only delicious but also environmentally conscious.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
-        <div class="content ps-0 ps-lg-5">
-          <p class="fst-italic">
-            Welcome to Cafe Eversoft, where every cup tells a story and every bite is a journey of flavors.
-            Established in the heart of the city, Cafe Eversoft is more than just a place to grab a cup of coffee;
-            it's a haven for those seeking a moment of respite, a burst of inspiration, and a celebration of the
-            finer things in life.
-          </p>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-check2-all"></i>At Cafe Eversoft, we are committed to ethical sourcing. Our coffee
-              beans are carefully selected from sustainable and fair-trade sources, ensuring that every cup you
-              enjoy has a positive impact on both the environment and the communities involved in the coffee
-              production process.</li>
-            <li><i class="bi bi-check2-all"></i>Cafe Eversoft is dedicated to minimizing our environmental
-              footprint. From eco-friendly packaging to energy-efficient practices, we are constantly exploring ways
-              to reduce our impact on the environment. Join us in our commitment to a greener future as we strive to
-              make each cup and every dish not only delicious but also environmentally conscious.</li>
-          </ul>
-          <p>
-            Whether you're seeking a quiet corner for reflection, a vibrant space for catching up with friends, or
-            simply a place to savor a delightful meal, Cafe Eversoft welcomes you. Our dedicated team is here to
-            ensure that every visit is a memorable experience, filled with warmth, flavor, and a touch of Eversoft
-            magic.
-          </p>
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img p-3" style="background-image: url(/assets/img/about.jpg) ;"
+            data-aos="fade-up" data-aos-delay="150">
+            <h2 class="aboutUs-font2">Welcome to CAFE.Eversoft...</h2>
+            <p class="aboutUs-font3 mx-5">Cafe Eversoft is dedicated to minimizing our environmental footprint. From
+              eco-friendly packaging to energy-efficient practices, we are constantly exploring ways to reduce our
+              impact on the environment. Join us in our commitment to a greener future as we strive to make each cup and
+              every dish not only delicious but also environmentally conscious.</p>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Welcome to Cafe Eversoft, where every cup tells a story and every bite is a journey of flavors.
+                Established in the heart of the city, Cafe Eversoft is more than just a place to grab a cup of coffee
+                it's a haven for those seeking a moment of respite, a burst of inspiration, and a celebration of the
+                finer things in life.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i>At Cafe Eversoft, we are committed to ethical sourcing. Our coffee
+                  beans are carefully selected from sustainable and fair-trade sources, ensuring that every cup you
+                  enjoy has a positive impact on both the environment and the communities involved in the coffee
+                  production process.</li>
+                <li><i class="bi bi-check2-all"></i>Cafe Eversoft is dedicated to minimizing our environmental
+                  footprint. From eco-friendly packaging to energy-efficient practices, we are constantly exploring ways
+                  to reduce our impact on the environment. Join us in our commitment to a greener future as we strive to
+                  make each cup and every dish not only delicious but also environmentally conscious.</li>
+              </ul>
+              <p>
+                Whether you're seeking a quiet corner for reflection, a vibrant space for catching up with friends, or
+                simply a place to savor a delightful meal, Cafe Eversoft welcomes you. Our dedicated team is here to
+                ensure that every visit is a memorable experience, filled with warmth, flavor, and a touch of Eversoft
+                magic.
+              </p>
+              <div class="position-relative mt-4">
+                <img src="/assets/img/about-2.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-lg-7 text-center">
-        <img src="/assets/img/about-2.jpg" class="img-fluid" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
     <!-- about section end -->
 
     <!-- Footer Section -->
