@@ -194,6 +194,12 @@
   </main>
 
   <?php include_once('../components/common/js.php') ?>
+      <script>
+        function menu(){
+            
+        }
+
+      </script>
 </body>
 
 </html>

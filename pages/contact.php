@@ -90,14 +90,14 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="8" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+              <div class="text-center"><button type="button" onclick="getContact();" class="btn btn-primary">Send Message</button></div>
             </form>
 
           </div>
@@ -172,6 +172,36 @@
   </main>
   
   <?php include_once('../components/common/js.php') ?>
+
+  <script>
+     async function getContact(){
+      const name = document.getElementById('name').value;
+      const email =document.getElementById('email').value;
+      const subject =document.getElementById('subject').value;
+      const message =document.getElementById('message').value;
+
+        if(email === '' || name === '' || subject == '' || message == ''){
+          iziToast.error({
+          title: 'Error',
+          message: 'Please fill all the fields',
+        });
+        }
+        else{
+        const response = await useFetch("/contact.php", 'POST', {
+          name,
+          email,
+          subject,
+          message
+        }, () =>{
+          iziToast.success({
+            title: 'Success',
+            message: 'Message Sending Successful',
+          });
+        }
+        );}
+
+    }
+  </script>
 </body>
 
 </html>
